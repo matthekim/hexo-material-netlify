@@ -16,10 +16,12 @@ collections:
     create: true # Allow users to create new documents in this menu
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
+      - {label: "Order", name: "order", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Link", name: "link", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      
+    sortableFields: ["order", "title", "date"]
+
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
     folder: "source/_posts" # The path to the folder where the documents are stored
