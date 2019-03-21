@@ -24,4 +24,13 @@ collections:
       - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-      
+ menuitems:
+  - name: "menu" # Used in routes, e.g., /admin/collections/blog
+    label: "Menu" # Used in the UI
+    folder: "source/_menu" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this menu
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
