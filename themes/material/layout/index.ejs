@@ -22,7 +22,19 @@
             <% }); %>
         <% } %>
     <% } %>
+*#<% page.menu.2019-03-21-about.title %>**$#
 
+    <!-- menu test -->
+    <% page.posts.each(function(post) { %>
+        <% if(!((typeof hasposttop === 'function') && post.top)) { %>
+            <% if(theme.scheme === 'Paradox') { %>
+                <!-- Paradox Thumbnail -->
+                <%- partial('_partial/Paradox-post_entry', { post: post, index: true, pin: false }) %>
+            <% } %>
+        <% } %>
+    <% }); %>
+    
+  #@@@ $$
     <!-- Normal Post -->
     <% page.posts.each(function(post) { %>
         <% if(!((typeof hasposttop === 'function') && post.top)) { %>

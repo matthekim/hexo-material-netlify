@@ -14,7 +14,7 @@
     <% } %>
 
         <!-- Post Title -->
-        <p class="article-headline-p"><a href="<%= url_for(post.path) %>"><% if(pin) { %><span>[Top]</span><% } %><%= post.title %></a></p>
+        <p class="article-headline-p"><a href="<%= url_for(post.path) %>"><% if(pin) { %><span>[Top]</span><% } %><%= post.title %>*</a></p>
     </div>
 
     <!-- Post Excerpt -->
@@ -38,7 +38,7 @@
             </div>
             <div>
                 <strong><%= config.author %></strong>
-                <span><%= date(post.date, 'MMM DD, YYYY') %></span>
+                <span><%= date(post.date, 'MMM DD, YYYY') %></span>#
             </div>
         </div>
         <div id="post_entry-right-info">
