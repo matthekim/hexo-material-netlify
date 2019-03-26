@@ -4,7 +4,7 @@
 
 /           /en        302  Language=en
 /about      /en/about  302  Language=en
-/services      /en/services  302  Language=en
+/services   /en/services  302  Language=en
 /contact    /en/contact  302  Language=en
 /archives/* /en/archives/:splat 302 Language=en
 
@@ -12,5 +12,3 @@
 /           /es        302  Language=es
 /about      /es/about  302  Language=es
 /archives/* /en/archives/:splat 302 Language=es
-
-
