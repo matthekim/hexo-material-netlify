@@ -21,6 +21,17 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Link", name: "link", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+  
+  - name: "home" # Used in routes, e.g., /admin/collections/menu
+    label: "Home" # Used in the UI
+    folder: "source/_posts/home" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this menu
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Text", name: "text", widget: "markdown"}
+      - {label: "Text Left", name: "textleft", widget: "markdown"}
 
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
