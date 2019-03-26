@@ -23,7 +23,8 @@
             });
             %>
             <% for (i = 0; i < posts.length; i++) {  var item=posts[i]; %>
-                <a href="<%- config.root %><%- item.path %>" class="navlink"><%- item.title %></a>&nbsp;
+                <a href="#" class="navlink"><%- item.title %></a>&nbsp;
+                <!--<a href="<%- config.root %><%- item.path %>" class="navlink"><%- item.title %></a>&nbsp;-->
             <% }; %>
             </div>
             <% site.posts.forEach(function(item){ %>
