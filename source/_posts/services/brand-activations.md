@@ -1,7 +1,7 @@
 ---
 type: services
 icon: /images/uploads/brandactivation.svg
-title: Brand Activations
+title: Brand Activation
 text: >-
   Brands are intrinsic to today’s event experience. To create genuine brand
   awareness, festivals must now go beyond logo placements and banners…
