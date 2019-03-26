@@ -344,7 +344,7 @@ p {
   letter-spacing: 0.1em !important;
 }
 .servicesLong h1 img {
-  margin-right:30px;
+  margin-right: 10px;
   width: 54px;
   height: 30px;
   margin-bottom: 10px;
@@ -355,6 +355,13 @@ p {
   font-family: 'Akzidenz-Grotesk-Next-Bold';
   letter-spacing: 0.1em !important;
 }
+.servicesLong ul {
+    list-style: none;
+    padding-left: 1.2em;
+    text-indent: -1.2em;
+}
+
+
 .servicesLong li {
   font-family: 'Akzidenz-Grotesk-Next-Regular';
     color: #707070;
@@ -362,6 +369,13 @@ p {
     font-size: 16px;
     line-height: 1.5em;
     color: #1D252D;
+}
+.servicesLong li:before {
+    content: "→";
+    display: block;
+    float: left;
+    width: 1.2em;
+    color: #707070;
 }
 .servicesLongImage {
   width: 400px;
@@ -379,6 +393,12 @@ p {
 }
 .servicesLongImageLeft {
   float: left;
+  margin-right: 80px;
+}
+.servicesLongRight {
+  margin-left: 80px;
+}
+.servicesLongLeft {
   margin-right: 80px;
 }
 .footer {
@@ -441,7 +461,7 @@ p {
   position: absolute;
   z-index: 99;
   top: 50px;
-  left: 650px;
+  right: 540px;
 }
 .footerMenu a {
   color: #FFFFFF;

@@ -16,12 +16,13 @@
         <% alter=0; site.posts.forEach(function(item){ %>
             <%  if(item.type=="services") { %>
             <div class="homeServicesLong">
-                <div class="servicesLongImage <% if(alter<=0) { %>servicesLongImageLeft<% alter=1; } else { %>servicesLongImageRight<% alter=0; };  %>" style="background-image:url(<%- item.image %>);"></div>
-                <div class="servicesLong">
+                <div class="servicesLongImage <% if(alter<=0) { %>servicesLongImageLeft<% } else { %>servicesLongImageRight<% }  %>" style="background-image:url(<%- item.image %>);"></div>
+                <div class="servicesLong <% if(alter<=0) { %>servicesLongLeft<% } else { %>servicesLongRight<% }  %>">
                     <h1><img src="<%- item.icon %>" border="0" class="serviceIcon" /><%- item.title %></h1>
                         <%- markdown(item.textlong) %>
                 </div>
             </div>
+            <% if(alter<=0) { alter=1; } else { alter=0; }  %>
             <%  } %>
         <% }); %>
 
