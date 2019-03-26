@@ -40,20 +40,38 @@ collections:
     create: true # Allow users to create new documents in this menu
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Type", name: "type", widget: "string", default: "services"}
+      - {label: "Type", name: "type", widget: "hidden", default: "services"}
       - {label: "Icon", name: "icon", widget: "image"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Text", name: "text", widget: "markdown"}
       - {label: "Text Long", name: "textlong", widget: "markdown"}
       - {label: "Image", name: "image", widget: "image", optional: true}
-      
+
+  - name: "references" # Used in routes, e.g., /admin/collections/menu
+    label: "References" # Used in the UI
+    folder: "source/_posts/references" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this menu
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Language", name: "lang", widget: "hidden", default: "en"}
+      - {label: "Type", name: "type", widget: "hidden", default: "reference"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Text", name: "text", widget: "markdown", required: false}
+      - {label: "Visitors", name: "visitors", widget: "string"}
+      - {label: "Entrance Gates", name: "entrance", widget: "string"}
+      - {label: 'Services', name: 'services', widget: 'select', options: ['Accreditation Management', 'Access Control', 'Brand Activation', 'Cashless Payment'] }
+      - {label: 'Event Type', name: 'eventtype', widget: 'select', options: ['Music Festival', 'Indoor Concert', 'Stadium Sports Event', 'Outdoor Sports Event'] }
+      - {label: "Image", name: "thumbnail", widget: "image"}
+
+
   - name: "pages" # Used in routes, e.g., /admin/collections/menu
     label: "Pages" # Used in the UI
     folder: "source/en" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this menu
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Type", name: "type", widget: "string", default: "page"}
+      - {label: "Type", name: "type", widget: "hidden", default: "page"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Text", name: "text", widget: "markdown" , optional: true}
 
