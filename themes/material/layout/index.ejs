@@ -24,8 +24,10 @@
     <% } %>
 
     <!-- menu test -->
-    <% site.posts.forEach(function(post) { %>
-        **<%- post.category %>**
+    <% site.posts.sort('order', -1).forEach(function(post) { %>
+        <% if(post.type=="menu") { %>
+        <%- post.title %>&nbsp;
+        <% } %>
     <% }) %>
     
   #@@@ $$
