@@ -16,7 +16,7 @@ collections:
     create: true # Allow users to create new documents in this menu
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Type", name: "type", widget: "hidden", value: "menu"}
+      - {label: "Type", name: "type", widget: "hidden", default: "menu"}
       - {label: "Order", name: "order", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Link", name: "link", widget: "string"}
@@ -28,7 +28,7 @@ collections:
     create: true # Allow users to create new documents in this menu
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Type", name: "type", widget: "string", value: "homepage"}
+      - {label: "Type", name: "type", widget: "string", default: "homepage"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Text", name: "text", widget: "markdown"}
@@ -40,7 +40,7 @@ collections:
     create: true # Allow users to create new documents in this menu
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Type", name: "type", widget: "string", value: "services"}
+      - {label: "Type", name: "type", widget: "string", default: "services"}
       - {label: "Icon", name: "icon", widget: "image"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Text", name: "text", widget: "markdown"}
