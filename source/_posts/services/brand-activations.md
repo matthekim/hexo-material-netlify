@@ -18,7 +18,7 @@ textlong: >-
   ## Features & benefits
 
 
-  * ## Multiple modules
+  * Multiple modules
 
   * Bridge between online-offline
 
