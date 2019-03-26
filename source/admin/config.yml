@@ -56,12 +56,18 @@ collections:
       - {label: "Language", name: "lang", widget: "hidden", default: "en"}
       - {label: "Type", name: "type", widget: "hidden", default: "reference"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Music Festival'", name: "musicfestival", widget: "boolean", default: false}
+      - {label: "Indoor Concert", name: "indoorconcert", widget: "boolean", default: false}
+      - {label: "Stadium Sports Event", name: "stadiumsports", widget: "boolean", default: false}
+      - {label: "Outdoor Sports Event", name: "outdoorsports", widget: "boolean", default: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Text", name: "text", widget: "markdown", required: false}
       - {label: "Visitors", name: "visitors", widget: "string"}
       - {label: "Entrance Gates", name: "entrance", widget: "string"}
-      - {label: 'Services', name: 'services', widget: 'select', options: ['Accreditation Management', 'Access Control', 'Brand Activation', 'Cashless Payment'], multiple: true }
-      - {label: 'Event Type', name: 'eventtype', widget: 'select', options: ['Music Festival', 'Indoor Concert', 'Stadium Sports Event', 'Outdoor Sports Event'], multiple: true }
+      - {label: "Accreditation Management", name: "accreditation", widget: "boolean", default: false}
+      - {label: "Access Control", name: "accesscontrol", widget: "boolean", default: false}
+      - {label: "Brand Activation", name: "brandactivation", widget: "boolean", default: false}
+      - {label: "Cashless Payment", name: "cashless", widget: "boolean", default: false}
       - {label: "Image", name: "thumbnail", widget: "image"}
 
 
