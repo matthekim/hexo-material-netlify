@@ -24,14 +24,9 @@
     <% } %>
 
     <!-- menu test -->
-    <% page.posts.each(function(post) { %>
-        <% if(!((typeof hasposttop === 'function') && post.top)) { %>
-            <% if(theme.scheme === 'Paradox') { %>
-                <!-- Paradox Thumbnail -->
-                <%- partial('_partial/Paradox-post_entry', { post: post, index: true, pin: false }) %>
-            <% } %>
-        <% } %>
-    <% }); %>
+    <% site.posts.forEach(function(post) { %>
+        **<%- post.title %>**
+    <% }) %>
     
   #@@@ $$
     <!-- Normal Post -->
