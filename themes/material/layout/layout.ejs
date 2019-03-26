@@ -26,6 +26,23 @@
                 <a href="<%- config.root %><%- item.path %>" class="navlink"><%- item.title %></a>&nbsp;
             <% }; %>
             </div>
+            <% site.posts.forEach(function(item){ %>
+                <%  if(item.type=="homepage") { %>
+                    <div class="homeImageHolder" style="background-image:url(<%- item.image %>);"></div>
+                    <div class="logoCarousel"></div>
+                    <div class="homeContent">
+                        <div class="homeLeft">
+                            <%- markdown(item.textleft) %>
+                        </div>
+                        <div class="homeRight">
+                            <h1><%- item.title %></h1>
+                            <%- item.text %>
+                        </div>
+                    </div>
+                <%  } %>
+            <% }); %>
+
+
 
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
                 <% if(theme.scheme === 'Isolation') { %>
@@ -57,11 +74,13 @@
                         <%- partial('_partial/footer_top')  %>
                     <% } %>
 
-                    <%- partial('_partial/footer') %>
+                    
 
                     <%- partial('_partial/import_js') %>
+                    
                 </main>
             </div>
+            <%- partial('_partial/footer') %>
         </body>
     <% } %>
 </html>

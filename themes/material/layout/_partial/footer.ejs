@@ -1,37 +1,56 @@
 <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    <% if(theme.scheme === 'Paradox') { %>
-        <!-- Paradox Footer Left Section -->
-        <%- partial('_partial/footer-left') %>
+<footer class="footer">
+        <div class="footerLogo" ><img src="/img/playpass-white.svg" alt="playpass" /></div>
+          <div class="footerMenu">
+                      <a  href="/about">About</a><br />
+                      <a  href="/technology">Technology</a><br />
+                      <a  href="/references">References</a><br />
+                      <a  href="/news">News</a><br />
+                      <a  href="/careers">Careers</a><br />
+                      <a  href="/contact">Contact</a>
+                </div>
 
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©<% if(theme.copyright_since) { %>&nbsp;<%= theme.copyright_since %>&nbsp;-<% } %><script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script><%- config.title %>
-            <% if(theme.footer_text) { %>
-                <br>
-                <% if(Array.isArray(theme.footer_text)) { %>
-                    <%- theme.footer_text.join('<br>') %>
-                <% } else { %>
-                    <%- theme.footer_text %>
-                <% } %>
-            <% } %>
+                <div class="addressHolder">
+                  <h3>Playpass Europe</h3>
+                  Lange Gasthuisstraat 29<br />
+                  2000 Antwerp — Belgium<br />
+                  <h3>Playpass US</h3>
+                  1177 Avenue of the Americas<br />
+                  7th floor New York, NY 10036<br /><br />
+                  +32 3 231 09 18<br />
+                  <a href='mailto:info@playpass.eu'>info@playpass.eu</a>
+                </div>
+
+        <div class="socialHolder">      
+          <!--<a title="facebook" href="https://facebook.com">
+            <img 
+            src={facebook}
+            alt="Facebook"
+                      style={{ width: '1em', height: '1em' }}
+                    />
+                  </a>
+                  <a title="twitter" href="https://twitter.com">
+                  <img
+                    className="fas fa-lg"
+                    src={twitter}
+                    alt="Twitter"
+                    style={{ width: '1em', height: '1em' }}
+                  />
+                </a>
+                <a title="instagram" href="https://instagram.com">
+                  <img
+                  src={instagram}
+                  alt="Instagram"
+                  style={{ width: '1em', height: '1em' }}
+                  />
+                </a>
+                <a title="vimeo" href="https://vimeo.com">
+                  <img
+                  src={vimeo}
+                  alt="Vimeo"
+                  style={{ width: '1em', height: '1em' }}
+                  />
+                </a>-->
         </div>
-
-        <!-- Paradox Footer Right Section -->
-
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
-
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
-
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-            </div>
-        </div>
-    <% } %>
-</footer>
+        <div class="disclaimer">2019 © Playpass <a href="">Privacy Policy</a></div>
+      </footer>
