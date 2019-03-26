@@ -1,4 +1,5 @@
 ---
+type: homepage
 image: /images/uploads/playpass-home.jpg
 title: At Playpass we are all about events and technology.
 text: >-

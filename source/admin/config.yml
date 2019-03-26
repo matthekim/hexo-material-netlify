@@ -16,7 +16,7 @@ collections:
     create: true # Allow users to create new documents in this menu
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Category", name: "category", widget: "hidden", value: "menu"}
+      - {label: "Type", name: "type", widget: "hidden", value: "menu"}
       - {label: "Order", name: "order", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Link", name: "link", widget: "string"}
@@ -28,10 +28,24 @@ collections:
     create: true # Allow users to create new documents in this menu
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
+      - {label: "Type", name: "type", widget: "string", value: "homepage"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Text", name: "text", widget: "markdown"}
       - {label: "Text Left", name: "textleft", widget: "markdown"}
+
+  - name: "services" # Used in routes, e.g., /admin/collections/menu
+    label: "Services" # Used in the UI
+    folder: "source/_posts/services" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this menu
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Type", name: "type", widget: "string", value: "services"}
+      - {label: "Icon", name: "icon", widget: "image"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Text", name: "text", widget: "markdown"}
+      - {label: "Text Long", name: "textlong", widget: "markdown"}
+      - {label: "Image", name: "image", widget: "image"}
 
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "Post" # Used in the UI
