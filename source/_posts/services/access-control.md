@@ -16,7 +16,7 @@ textlong: >-
   ## Features & benefits
 
 
-  * ## Barcode scanning, QR code, RFID and NFC or eID
+  * Barcode scanning, QR code, RFID and NFC or eID
 
   * Handhelds, RFID portals or stand alone gatekeepers
 
