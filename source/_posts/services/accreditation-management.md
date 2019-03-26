@@ -16,7 +16,7 @@ textlong: >-
   ## Features & benefits
 
 
-  * ## Multiple profiles, ticket types and zones
+  * Multiple profiles, ticket types and zones
 
   * Individual pre-registration form
 
