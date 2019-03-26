@@ -1,6 +1,5 @@
 ---
 type: page
 title: contact
-text: ' '
+text: ' lorem'
 ---
-

@@ -8,40 +8,26 @@
         <%- partial('_widget/page-gallery') %>
     <% } else { %>
         <body id="scheme-<%= theme.scheme %>" class="lazy">
-            <!-- menu -->
-            <div class="menuHolder">
-                <a href="<%- config.root %>"><img src="/img/playpass.svg" border="0" id="playpass" /></a>
-            <%
-            var posts = [];
-            site.posts.forEach(function(item){
-                if(item.type=="menu") {
-                    posts.push(item);
-                }
-            });
-            posts.sort(function(a, b){
-                return a.order > b.order
-            });
-            %>
-            <% for (i = 0; i < posts.length; i++) {  var item=posts[i]; %>
-                <a href="#" class="navlink"><%- item.title %></a>&nbsp;
-                <!--<a href="<%- config.root %><%- item.path %>" class="navlink"><%- item.title %></a>&nbsp;-->
-            <% }; %>
-            </div>
-            <% site.posts.forEach(function(item){ %>
-                <%  if(item.type=="homepage") { %>
-                    <div class="homeImageHolder" style="background-image:url(<%- item.image %>);"></div>
-                    <div class="logoCarousel"></div>
-                    <div class="homeContent">
-                        <div class="homeLeft">
-                            <%- markdown(item.textleft) %>
+            <%- partial('_partial/menu') %>
+            
+            <% if( (theme.scheme === 'Paradox') && (page.current === 1) && (is_home()) ) { %>
+                <% site.posts.forEach(function(item){ %>
+                    <%  if(item.type=="homepage") { %>
+                        <div class="homeImageHolder" style="background-image:url(<%- item.image %>);"></div>
+                        <div class="logoCarousel"></div>
+                        <div class="homeContent">
+                            <div class="homeLeft">
+                                <%- markdown(item.textleft) %>
+                            </div>
+                            <div class="homeRight">
+                                <h1><%- item.title %></h1>
+                                <%- item.text %>
+                            </div>
                         </div>
-                        <div class="homeRight">
-                            <h1><%- item.title %></h1>
-                            <%- item.text %>
-                        </div>
-                    </div>
-                <%  } %>
-            <% }); %>
+                    <%  } %>
+                <% }); %>
+            <% } %>
+            
 
 
 
