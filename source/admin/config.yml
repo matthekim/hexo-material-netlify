@@ -60,8 +60,8 @@ collections:
       - {label: "Text", name: "text", widget: "markdown", required: false}
       - {label: "Visitors", name: "visitors", widget: "string"}
       - {label: "Entrance Gates", name: "entrance", widget: "string"}
-      - {label: 'Services', name: 'services', widget: 'select', options: ['Accreditation Management', 'Access Control', 'Brand Activation', 'Cashless Payment'] }
-      - {label: 'Event Type', name: 'eventtype', widget: 'select', options: ['Music Festival', 'Indoor Concert', 'Stadium Sports Event', 'Outdoor Sports Event'] }
+      - {label: 'Services', name: 'services', widget: 'select', options: ['Accreditation Management', 'Access Control', 'Brand Activation', 'Cashless Payment'], multiple: true }
+      - {label: 'Event Type', name: 'eventtype', widget: 'select', options: ['Music Festival', 'Indoor Concert', 'Stadium Sports Event', 'Outdoor Sports Event'], multiple: true }
       - {label: "Image", name: "thumbnail", widget: "image"}
 
 
