@@ -322,39 +322,59 @@ p {
   margin-top:4px;
   margin-bottom:4px;
 }
+.servicesIconHolder {
+  position:absolute;
+  width:20%;
+}
+.iconTitle {
+  float:left;
+  width: 0;
+  overflow: visible;
+}
+.servicesLongLeft > .serviceIcon {
+  left:0px;
+}
 .serviceIcon {
   width: 72px;
   height: 40px;
 }
 .homeServicesLong {
   position: relative;
-  margin-top: 200px;
-  margin-bottom: 200px;
-  margin-left: 30px;
-  margin-right: 30px;
-  overflow: hidden;
+  /*overflow: hidden;*/
+}
+.homeServicesLongHolder {
+  padding-bottom: 200px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .servicesLong {
-  float:left;
-  width: 510px;
+  /*float:left;
+  width: 510px;*/
+  position :relative;
+  background-color:#f7f7fa;
+  width:calc(1280px - 60px -60px);
+  padding: 40px;
 }
 
 .servicesLong h1 {
-  color:#004B87;
-  font-size: 28px;
-  font-family: 'Akzidenz-Grotesk-Next-Bold';
+  color:#000000;
+  font-size: 14px;
+  font-family: 'Akzidenz-Grotesk-Next-Regular';
   letter-spacing: 0.1em !important;
+  text-transform:uppercase;
 }
 .servicesLong h1 img {
   margin-right: 10px;
   width: 54px;
   height: 30px;
   margin-bottom: 10px;
+  float:left;
 }
 .servicesLong h2 {
   color:#004B87;
-  font-size: 20px;
-  font-family: 'Akzidenz-Grotesk-Next-Bold';
+  font-size: 24px;
+  line-height:1.3em;
+  font-family: 'Akzidenz-Grotesk-Next-Regular';
   letter-spacing: 0.1em !important;
 }
 .servicesLong ul {
@@ -381,27 +401,50 @@ p {
 }
 .servicesLongImage {
   width: 400px;
-  height: 700px;
+  height: 280px;/*700px;*/
   background-repeat: no-repeat;
   background-position: center center; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+  z-index:9999;
+  position:absolute;
+  top: 140px;
 }
 .servicesLongImageRight {
-  float: right;
-  margin-left: 80px;
+  /*float: right;
+  margin-left: 80px;*/
+  right:0px;
 }
 .servicesLongImageLeft {
-  float: left;
-  margin-right: 80px;
+  /*float: left;
+  margin-right: 80px;*/
+  left:0px;
 }
 .servicesLongRight {
-  margin-left: 80px;
+  margin-right: 60px;
+}
+.servicesLongRight > .servicesIconHolder {
+  right:0px;
 }
 .servicesLongLeft {
-  margin-right: 80px;
+  margin-left: 60px;
+}
+.servicesLongTextLeft {
+  margin-left:360px;
+}
+.servicesLongTextRight {
+  margin-right:360px;
+}
+.learnmoreButton {
+  text-transform:uppercase;
+  background-color:#004B87;
+  text-decoration:none;
+  padding:10px;
+  color:#FFFFFF !important;
+  margin-top:10px;
+  margin-bottom:10px;
 }
 .footer {
   position:relative;
@@ -616,16 +659,18 @@ label[for="sidebar-btn"] {
   top: 130px;
   text-align:left;
   color: #004B87;
+  width:162px;
 }
 .sideMenuItem {
   position:relative;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .sideMenuItem a, .sideMenuItem a:active, .sideMenuItem a:visited {
   color: #004B87;
   text-decoration:none;
   line-height: 1.2em;
+  display: inline;
 }
 .sideMenuItem a:hover {
   border-bottom: 2px solid #004B87;

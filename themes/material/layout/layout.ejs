@@ -70,6 +70,9 @@
                     });
             });
                         </script>
+                        
+                        <!--stats home-->
+                        <!--
                         <div class="homeContent">
                             <div class="homeLeft">
                                 <%- markdown(item.textleft) %>
@@ -79,6 +82,7 @@
                                 <%- item.text %>
                             </div>
                         </div>
+                        -->
                     <%  } %>
                 <% }); %>
             <% } %>
@@ -143,7 +147,7 @@
                             });
                             %>
                             <% for (i = 0; i < posts.length; i++) {  var item=posts[i]; %>
-                                <div class='sideMenuItem'><a href="#" class=""><%- item.title %></a></div>
+                                <div class='sideMenuItem'><a href="<%- item.link %>" class=""><%- item.title %></a></div>
                                 <!--<a href="<%- config.root %><%- item.path %>" class="navlink"><%- item.title %></a>&nbsp;-->
                             <% }; %>
                     </div>
