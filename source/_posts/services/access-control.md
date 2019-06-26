@@ -3,6 +3,8 @@ type: services
 icon: /images/uploads/accesscontrol.svg
 title: Access Control
 text: >-
+  ## Guarantee a smooth entrance flow and eliminate ticket fraud
+
   From standard tickets to RFID wristband scanning. To manage public entrances
   and/or to streamline the entrance flow to specific areas…
 textlong: >-
