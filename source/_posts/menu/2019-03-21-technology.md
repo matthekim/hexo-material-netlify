@@ -1,9 +1,8 @@
 ---
-order: '300'
+type: menu
+order: '5'
 title: Technology
 link: technology
 date: '2019-03-21T13:03:24+01:00'
-type: menu
-
 ---
 
