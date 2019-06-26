@@ -1,9 +1,8 @@
 ---
-order: '400'
+type: menu
+order: '6'
 title: References
 link: references
 date: '2019-03-21T13:15:41+01:00'
-type: menu
-
 ---
 
