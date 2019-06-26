@@ -8,13 +8,68 @@
         <%- partial('_widget/page-gallery') %>
     <% } else { %>
         <body id="scheme-<%= theme.scheme %>" class="lazy">
+                <input type="checkbox" id="sidebar-btn" class="sidebar-btn" checked/>
+                <label for="sidebar-btn">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                </label>
+
+         <div class="content">
             <%- partial('_partial/menu') %>
             
             <% if( (theme.scheme === 'Paradox') && (page.current === 1) && (is_home()) ) { %>
                 <% site.posts.forEach(function(item){ %>
                     <%  if(item.type=="homepage") { %>
                         <div class="homeImageHolder" style="background-image:url(<%- item.image %>);"></div>
-                        <div class="logoCarousel"></div>
+                        <div class="logoCarousel">
+                                <div class='gradientLeft'></div>
+                                <div class="arrow-left"></div>
+                                <div class="logoCarouselHolder">
+                                    <div class="carouselLogo"><img id="rock-werchter" class="svg" src="/images/uploads/logo-rock-werchter.svg" /></div>
+                                    <div class="carouselLogo"><img id="jazz-middelheim" class="svg" src="/images/uploads/logo-jazz-middelheim.svg" /></div>
+                                    <div class="carouselLogo"><img id="dour" class="svg" src="/images/uploads/logo-dour.svg" /></div>
+                                    <div class="carouselLogo"><img id="tw-classic" class="svg" src="/images/uploads/logo-tw-classic.svg" /></div>
+                                    <div class="carouselLogo"><img id="acdc" class="svg" src="/images/uploads/logo-acdc.svg" /></div>
+                                    <div class="carouselLogo"><img id="graspop" class="svg" src="/images/uploads/logo-graspop.svg" /></div>
+                                </div>
+                                <div class="arrow-right"></div>
+                                <div class='gradientRight'></div>
+                        </div>
+                        <script>
+                            jQuery(document).ready(function() {
+                /*
+                 * Replace all SVG images with inline SVG
+                 */
+                    jQuery('img.svg').each(function(){
+                        var $img = jQuery(this);
+                        var imgID = $img.attr('id');
+                        var imgClass = $img.attr('class');
+                        var imgURL = $img.attr('src');
+                
+                        jQuery.get(imgURL, function(data) {
+                            // Get the SVG tag, ignore the rest
+                            var $svg = jQuery(data).find('svg');
+                
+                            // Add replaced image's ID to the new SVG
+                            if(typeof imgID !== 'undefined') {
+                                $svg = $svg.attr('id', imgID);
+                            }
+                            // Add replaced image's classes to the new SVG
+                            if(typeof imgClass !== 'undefined') {
+                                $svg = $svg.attr('class', imgClass+' replaced-svg');
+                            }
+                            
+                            // Remove any invalid XML tags as per http://validator.w3.org
+                            $svg = $svg.removeAttr('xmlns:a');
+                            
+                            // Replace image with new SVG
+                            $img.replaceWith($svg);
+                        });
+    
+                    });
+            });
+                        </script>
                         <div class="homeContent">
                             <div class="homeLeft">
                                 <%- markdown(item.textleft) %>
@@ -68,6 +123,32 @@
                 </main>
             </div>
             <%- partial('_partial/footer') %>
+
+        </div>
+
+             <div class="sidebarMenu">
+                <div class='sidebarMenuHolder'>
+                    <label class='closeSide' for="sidebar-btn"></label>
+
+                    <div class='sideMenu'>
+                            <%
+                            var posts = [];
+                            site.posts.forEach(function(item){
+                                if(item.type=="menu") {
+                                    posts.push(item);
+                                }
+                            });
+                            posts.sort(function(a, b){
+                                return a.order > b.order
+                            });
+                            %>
+                            <% for (i = 0; i < posts.length; i++) {  var item=posts[i]; %>
+                                <div class='sideMenuItem'><a href="#" class=""><%- item.title %></a></div>
+                                <!--<a href="<%- config.root %><%- item.path %>" class="navlink"><%- item.title %></a>&nbsp;-->
+                            <% }; %>
+                    </div>
+                </div>
+             </div>
         </body>
     <% } %>
 </html>

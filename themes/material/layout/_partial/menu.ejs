@@ -13,7 +13,13 @@
             });
             %>
             <% for (i = 0; i < posts.length; i++) {  var item=posts[i]; %>
-                <a href="#" class="navlink"><%- item.title %></a>&nbsp;
+                <!--<a href="#" class="navlink"><%- item.title %></a>&nbsp;-->
                 <!--<a href="<%- config.root %><%- item.path %>" class="navlink"><%- item.title %></a>&nbsp;-->
             <% }; %>
+                
+                <a href="#access-control" class="navlink">Access Control</a>&nbsp;
+                <a href="#cashless-paymeent" class="navlink">Cashless Payment</a>&nbsp;
+                <a href="#accreditation-management" class="navlink">Accreditation Management</a>&nbsp;
+
+                <div class="menuPadderRight">&nbsp;</div>
             </div>
