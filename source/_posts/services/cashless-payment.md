@@ -3,7 +3,7 @@ type: services
 icon: /images/uploads/cashless.svg
 title: Cashless Payment
 text: >-
-  ## Eliminate on-site cash handling wiith our Cashless Payments
+  ## Eliminate on-site cash handling with our Cashless Payments
 
 
   Our cashless payment system can greatly limit or eliminate on-site cash
