@@ -3,6 +3,8 @@ type: services
 icon: /images/uploads/accreditation.svg
 title: Accreditation Management
 text: >-
+  ## Manage accreditations for crew, artists and all your relations
+
   An easy-to-use online registration tool to manage accreditations for crew,
   guests, artists and all other known relations which need to access the event…
 textlong: >-
