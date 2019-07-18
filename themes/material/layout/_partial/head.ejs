@@ -105,7 +105,10 @@
         <% } %>
 
     <% } %>
-
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    // Add the new slick-theme.css if you want the default styling
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    
 
 
     <% if(theme.scheme === 'Isolation') { %>
@@ -128,6 +131,7 @@
     <% } else { %>
         <%- jsLsload({path:('js/jquery.min.js'),key:'jq_js'}) %>
     <% } %>
+    <script type="text/javascript" src="js/slick.min.js"></script>
 
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">

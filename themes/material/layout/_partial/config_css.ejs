@@ -757,7 +757,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   margin-top:25px;
 }
 .carouselLogo:first-child {
-  margin-left:110px;
+  /*margin-left:110px;*/
 }
 .carouselLogo img, .carouselLogo svg {
   height:100%;
@@ -770,6 +770,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', e
   opacity: 1;
   transition: opacity 1s ease;
   cursor:pointer;
+}
+.slick-prev {
+  position:absolute;
+  left:40px;
+  top:46px;
+  z-index:9999;
+  width:12px;
+  height:12px;
+  border: solid #004B87;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.slick-next {
+  position: absolute;
+  right:40px;
+  top: 46px;
+  z-index:9999;
+  width:12px;
+  height:12px;
+  border: solid #004B87;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 </style>
 

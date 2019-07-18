@@ -24,7 +24,7 @@
                         <div class="homeImageHolder" style="background-image:url(<%- item.image %>);"></div>
                         <div class="logoCarousel">
                                 <div class='gradientLeft'></div>
-                                <div class="arrow-left"></div>
+                                <!--<div class="arrow-left"></div>-->
                                 <div class="logoCarouselHolder">
                                     <div class="carouselLogo"><img id="rock-werchter" class="svg" src="/images/uploads/logo-rock-werchter.svg" /></div>
                                     <div class="carouselLogo"><img id="jazz-middelheim" class="svg" src="/images/uploads/logo-jazz-middelheim.svg" /></div>
@@ -32,8 +32,16 @@
                                     <div class="carouselLogo"><img id="tw-classic" class="svg" src="/images/uploads/logo-tw-classic.svg" /></div>
                                     <div class="carouselLogo"><img id="acdc" class="svg" src="/images/uploads/logo-acdc.svg" /></div>
                                     <div class="carouselLogo"><img id="graspop" class="svg" src="/images/uploads/logo-graspop.svg" /></div>
+                                    
+                                    <div class="carouselLogo"><img id="rock-werchter" class="svg" src="/images/uploads/logo-rock-werchter.svg" /></div>
+                                    <div class="carouselLogo"><img id="jazz-middelheim" class="svg" src="/images/uploads/logo-jazz-middelheim.svg" /></div>
+                                    <div class="carouselLogo"><img id="dour" class="svg" src="/images/uploads/logo-dour.svg" /></div>
+                                    <div class="carouselLogo"><img id="tw-classic" class="svg" src="/images/uploads/logo-tw-classic.svg" /></div>
+                                    <div class="carouselLogo"><img id="acdc" class="svg" src="/images/uploads/logo-acdc.svg" /></div>
+                                    <div class="carouselLogo"><img id="graspop" class="svg" src="/images/uploads/logo-graspop.svg" /></div>
+
                                 </div>
-                                <div class="arrow-right"></div>
+                                <!--<div class="arrow-right"></div>-->
                                 <div class='gradientRight'></div>
                         </div>
                         <script>
@@ -67,6 +75,13 @@
                             $img.replaceWith($svg);
                         });
     
+                    });
+
+                    $('.logoCarouselHolder').slick({
+                        dots: true,
+                        infinite: true,
+                        slidesToShow: 6,
+                        slidesToScroll: 6
                     });
             });
                         </script>
